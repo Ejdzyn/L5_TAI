@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, Input} from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -8,21 +8,25 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class BlogComponent implements OnInit {
 
+
   @Input() filterText: string = "";
+  @Input() id: number = 0;
+
   public items$: any;
 
-  constructor(private service:DataService) {
-
+  constructor(private service: DataService) {
   }
+
 
   ngOnInit(): void {
     this.getAll();
   }
 
-  getAll() {
+  getAll(){
     this.service.getAll().subscribe(response => {
       this.items$ = response;
     });
   }
+
 
 }

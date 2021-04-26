@@ -19,6 +19,7 @@ import { SearchBarComponent } from './shared/search-bar/search-bar.component';
 import { BlogHomeComponent } from './components/blog-home/blog-home.component';
 import {FilterPipe} from "./pipes/filter.pipe";
 import { TextFormatDirective } from './directives/text-format.directive';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { TextFormatDirective } from './directives/text-format.directive';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [
     DataService

@@ -14,7 +14,7 @@ class Complex {
         return Math.sqrt(Math.pow(this.real, 2) + Math.pow(this.imaginary, 2));
     }
     toString() {
-        console.log("RZECZYWISTA: " + this.real + (this.real != 0 ? ", UROJONA: " + this.imaginary : ""));
+        console.log("RZECZYWISTA: " + this.real + (this.real !== 0 ? ", UROJONA: " + this.imaginary : ""));
     }
 }
 const c1 = new Complex(3, 4);
