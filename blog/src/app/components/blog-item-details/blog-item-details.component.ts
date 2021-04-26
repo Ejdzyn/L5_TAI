@@ -10,8 +10,8 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class BlogItemDetailsComponent implements OnInit {
 
-  public image = 'http://osnews.pl/wp-content/uploads/2016/06/it-grafika.jpg';
-  public text = 'Tytuł';
+  public image = undefined;
+  public text = undefined;
   public id: number = 0;
   constructor(private dataService: DataService, private route: ActivatedRoute) {
   }
